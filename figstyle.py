@@ -1,7 +1,7 @@
 """Shared publication style for all article figures (dolphin d04, cross-species m06, Null B m07, spectrograms).
 
 One palette, one type scale, one save routine.
-  Species colours are fixed across every figure: dolphin = orange, marmoset = blue. Nulls = neutral greys.
+  Species colours are fixed across every figure: dolphin = blue, marmoset = copper. Nulls = neutral greys.
   Type scale at the nominal full-width figure (10 in): 12 pt axis labels / titles, 10 pt ticks and legends,
   9.5 pt annotations, 14 pt bold panel letters, 13 pt figure headline.
   Output: PNG at 300 dpi + vector PDF (fonts embedded as TrueType).
@@ -13,11 +13,14 @@ import matplotlib.pyplot as plt
 
 # ---- palette (dataviz reference, light surface) ----
 INK = '#0b0b0b'; INK2 = '#52514e'; MUTED = '#9a9891'; GRID = '#e6e5e1'; SURF = '#fcfcfb'
-ORANGE = '#eb6834'; BLUE = '#2a78d6'
-DOLPHIN = ORANGE; MARMOSET = BLUE
-DOLPHIN_LIGHT = '#f5b89d'; MARMOSET_LIGHT = '#a9c8ee'
-DOLPHIN_DARK = '#9c3d15'                                  # secondary dolphin series (e.g. transposed triples)
-ORANGES = ['#f5b89d', '#f08f64', '#eb6834', '#b84a1f', '#7a2f12']   # light -> dark, repeated renditions
+BLUE = '#2a78d6'; COPPER = '#C4883A'
+DOLPHIN = BLUE; MARMOSET = COPPER
+DOLPHIN_LIGHT = '#a9c8ee'; MARMOSET_LIGHT = '#e8c9a8'
+DOLPHIN_DARK = '#1a5499'                                  # secondary dolphin series (e.g. transposed triples)
+BLUES = ['#a9c8ee', '#6ba3e0', '#2a78d6', '#1a5499', '#0f3466']   # light -> dark, repeated renditions
+# Legacy — used by spectrogram colormap (d06), not species-coded
+ORANGE = '#eb6834'
+ORANGES = BLUES  # backward compat alias
 G1 = '#c3c2b7'; G2 = '#8a8984'; G3 = '#52514e'           # null greys, light -> dark
 BAND_NEUTRAL = '#f3f2ee'; BAND_WARM = '#fbeee6'          # background spans
 

@@ -146,8 +146,8 @@ seq = [3987, 3988, 3989, 3990, 3991, 3992, 3993, 3994, 3995]
 f = plt.figure(figsize=(FULL_W, 7.8)); gs = f.add_gridspec(2, 3, height_ratios=[1.35, 1], hspace=0.5, wspace=0.3)
 for k, (title, ix) in enumerate(bouts):
     ax = f.add_subplot(gs[0, k]); style(ax, xlabel='time from whistle onset (s)', ylabel='frequency (kHz)' if k == 0 else None)
-    t0s = df.abs_t0.values[ix]; cols = ORANGES[:len(ix)] if len(ix) <= 3 else ORANGES
-    if len(ix) == 3: cols = [ORANGES[0], ORANGES[2], ORANGES[4]]
+    t0s = df.abs_t0.values[ix]; cols = BLUES[:len(ix)] if len(ix) <= 3 else BLUES
+    if len(ix) == 3: cols = [BLUES[0], BLUES[2], BLUES[4]]
     for i, (w, c) in enumerate(zip(ix, cols)):
         a_ = C[w]; ax.plot(a_[:, 0] - a_[0, 0], a_[:, 1] / 1000, color=c, lw=2, alpha=0.95, label=f'+{t0s[i] - t0s[0]:.1f} s' if i else '0 s')
     ax.set_title(title, loc='left', fontsize=FS_ANNO); ax.legend(title='onset', loc='best', handlelength=1.2, fontsize=FS_SMALL)

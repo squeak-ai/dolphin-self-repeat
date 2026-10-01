@@ -27,7 +27,8 @@ FPS = float(open(_FPS_FILE).read().strip())
 # dataviz reference palette (light surface) — same as d01_lib
 INK = '#0b0b0b'; INK2 = '#52514e'; MUTED = '#9a9891'; GRID = '#e6e5e1'; SURF = '#fcfcfb'
 BLUE = '#2a78d6'; ORANGE = '#eb6834'; GREEN = '#1baf7a'; AMBER = '#eda100'; GREY = '#8a8984'
-DOLPHIN = ORANGE; MARMOSET = BLUE
+COPPER = '#C4883A'
+DOLPHIN = BLUE; MARMOSET = COPPER  # species palette (matches figstyle.py)
 
 _VER_RANK = {'v3': 4, 'v2cleaned': 4, 'v2': 3, 'v1_reextract': 2, 'v1': 1}
 
